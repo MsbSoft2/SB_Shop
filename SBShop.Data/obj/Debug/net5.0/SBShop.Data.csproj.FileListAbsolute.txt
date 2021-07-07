@@ -1,0 +1,15 @@
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\obj\Debug\net5.0\SBShop.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\obj\Debug\net5.0\SBShop.Data.AssemblyInfoInputs.cache
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\obj\Debug\net5.0\SBShop.Data.AssemblyInfo.cs
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\obj\Debug\net5.0\SBShop.Data.csproj.CoreCompileInputs.cache
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\bin\Debug\net5.0\SBShop.Data.deps.json
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\bin\Debug\net5.0\SBShop.Data.runtimeconfig.json
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\bin\Debug\net5.0\SBShop.Data.runtimeconfig.dev.json
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\bin\Debug\net5.0\SBShop.Data.dll
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\bin\Debug\net5.0\ref\SBShop.Data.dll
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\bin\Debug\net5.0\SBShop.Data.pdb
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\obj\Debug\net5.0\SBShop.Data.dll
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\obj\Debug\net5.0\ref\SBShop.Data.dll
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\obj\Debug\net5.0\SBShop.Data.pdb
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\obj\Debug\net5.0\SBShop.Data.genruntimeconfig.cache
+C:\Users\SADRA\Desktop\SBShop\SBShop.Data\obj\Debug\net5.0\SBShop.Data.csproj.AssemblyReference.cache

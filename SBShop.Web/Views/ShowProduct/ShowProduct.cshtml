@@ -1,0 +1,26 @@
+﻿@using SBShop.Utility.Convertors
+@model SBShop.Data.DTO.Product.ShowListProduct
+@{
+    ViewData["Title"] = "ShowProduct";
+}
+
+<h1>@Model.Name</h1>
+
+<div class="card border-white">
+    <img src="/Images/@Model.Image" class="card-img-top img-thumbnail" width="300" alt="@Model.Image">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text text-justify">
+            @Html.Raw(Model.Description)
+        </p>
+        <p class="card-text">
+            <h4 class="text-center rounded-pill py-3 text-warning border border-warning">
+                قیمت :
+                @Model.Price.ToRial()
+            </h4>
+        </p>
+        <div class="text-center">
+            <a asp-controller="Order" asp-action="AddToOrder" asp-route-productId="@Model.ProductId" class="btn rounded-pill btn-info mx-3">افزودن به سبد خرید</a>
+        </div>
+    </div>
+</div>

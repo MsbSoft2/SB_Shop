@@ -1,0 +1,67 @@
+﻿@page
+@using SBShop.Data.Models
+@model SBShop.Web.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "لیست کاربران";
+    int counter = 0;
+}
+
+<h1>مشاهده کاربران</h1>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ردیف</th>
+            <th scope="col">نام کامل</th>
+            <th scope="col">ایمیل</th>
+            <th scope="col">موبایل</th>
+            <th scope="col">نوع کاربر</th>
+            <th scope="col">موارد</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.Users)
+        {
+            <tr>
+                <td>@(++counter)</td>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Mobile</td>
+                <td>
+                    @if (item.Type == (int)UserTypeEnum.Admin)
+                    {
+                        <span class="badge badge-warning">کاربر ادمین</span>
+                        if (item.IsActive == true)
+                        {
+                            <span class="badge badge-success">فعال</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-danger">غیر فعال</span>
+                        }
+                    }
+                    else
+                    {
+                        <span class="badge badge-info">کاربر عادی</span>
+                        if (item.IsActive == true)
+                        {
+                            <span class="badge badge-success">فعال</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-danger">غیر فعال</span>
+                        }
+                    }
+                </td>
+                <td>
+                    <a asp-page="Delete" asp-route-userId="@item.UserId" class="btn my-1 rounded-pill btn-sm btn-outline-danger">حذف</a>
+                    <a asp-page="Edit" asp-route-id="@item.UserId" class="btn my-1 rounded-pill btn-sm btn-outline-primary">ویرایش</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

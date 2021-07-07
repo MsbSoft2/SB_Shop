@@ -1,0 +1,14 @@
+﻿
+@model IEnumerable<SBShop.Data.DTO.Category.ShowCategoryGroupViewModel>
+
+<h2>دسته بندی ها</h2>
+
+<ul class="list-group col-12 mb-4">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item">
+            <a asp-controller="ShowProduct" asp-action="ShowProductsByCategory" asp-route-categoryId="@item.CategoryId">@item.Name</a>
+            <span class="badge badge-primary badge-pill mr-2">@item.CountGroup</span>
+        </li>
+    }
+</ul>

@@ -1,0 +1,25 @@
+﻿@using SBShop.Utility.Convertors
+@model IEnumerable<SBShop.Data.DTO.Product.ShowListProduct>
+
+
+<div class="row text-center">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4 mt-3">
+            <div class="card">
+                <img src="/Images/@product.Image" class="card-img-top img-thumbnail img-fluid image_product" height="200" alt="@product.Image">
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <hr />
+                    <p class="card-text badge-pill badge badge-warning">
+                        <span>قیمت : @product.Price.ToRial()  تومان</span>
+                    </p>
+                    @{
+                        var productName = product.Name.Replace(" ", "-").ToString();
+                    }
+                    <a asp-controller="ShowProduct" asp-action="ShowProduct" asp-route-id="@product.ProductId" asp-route-name="@productName" class="btn rounded-pill btn-block btn-outline-primary">مشاهده محصول</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

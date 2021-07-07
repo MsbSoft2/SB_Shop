@@ -1,0 +1,14 @@
+﻿
+@model IEnumerable<SBShop.Data.DTO.Product.ShowListProduct>
+
+@{
+    ViewData["Title"] = "ShowProductsByCategory";
+}
+
+<h1>
+    لیست گروه
+    @ViewData["categoryName"]
+</h1>
+
+<hr />
+<partial name="_ProductItem" model="@Model" />

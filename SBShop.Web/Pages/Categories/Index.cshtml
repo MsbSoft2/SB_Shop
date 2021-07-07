@@ -1,0 +1,39 @@
+﻿@page
+@model SBShop.Web.Pages.Categories.IndexModel
+@{
+    ViewData["Title"] = "لیست  گروه ها";
+    int counter = 0;
+}
+
+<h1>مشاهده گروه ها</h1>
+
+<a asp-page="AddCategory" class="btn rounded-pill btn-success">افزودن گروه جدید</a>
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ردیف</th>
+            <th scope="col">نام گروه</th>
+            <th scope="col">توضیحات</th>
+            <th scope="col">موارد</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.Categories)
+        {
+            <tr>
+                <td>@(++counter)</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>
+                    <a asp-page="DeleteCategory" asp-route-categoryId="@item.CategoryId" class="btn rounded-pill btn-sm btn-outline-danger">حذف</a>
+                    @*<a asp-page="Edit" asp-route-id="@item.CategoryId" class="btn rounded-pill btn-sm btn-outline-primary">ویرایش</a>*@
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

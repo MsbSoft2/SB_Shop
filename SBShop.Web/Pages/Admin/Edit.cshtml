@@ -1,0 +1,52 @@
+﻿@page
+@model SBShop.Web.Pages.Admin.EditModel
+@{
+    ViewData["Title"] = "ویرایش";
+}
+
+
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input type="hidden" asp-for="user.UserId" />
+    <div class="row text-right">
+        <div class="col-md-6 my-2">
+            <label asp-for="user.FullName"></label>
+            <input asp-for="user.FullName" class="form-control">
+        </div>
+        <div class="col-md-6 my-2">
+            <label asp-for="user.Password"></label>
+            <input asp-for="user.Password" class="form-control">
+        </div>
+        <div class="col-md-6 my-2">
+            <label asp-for="user.Email"></label>
+            <input asp-for="user.Email" class="form-control">
+        </div>
+        <div class="col-md-6 my-2">
+            <label asp-for="user.Mobile"></label>
+            <input asp-for="user.Mobile" class="form-control">
+        </div>
+        <div class="col-md-6 my-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" asp-for="user.IsActive" value="true">
+                <label class="form-check-label mr-5">
+                     فعال سازی
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" asp-for="user.IsActive" value="false">
+                <label class="form-check-label mr-5">
+                  غیر فعال سازی
+                </label>
+            </div>
+        </div>
+        <div class="col-md-6 my-2">
+            <label for="inputState">نوع حساب</label>
+            <select asp-for="user.Type" class="form-control">
+                <option selected>انتخاب کنید...</option>
+                <option value="2">کاربر عادی</option>
+                <option value="1">کاربر ادمین</option>
+            </select>
+        </div>
+    </div>
+    <input class="btn rounded-pill btn-block btn-warning" type="submit" value="ویرایش" />
+</form>

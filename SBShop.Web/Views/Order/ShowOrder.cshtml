@@ -1,0 +1,60 @@
+﻿@using SBShop.Utility.Convertors
+@model IEnumerable<SBShop.Data.DTO.Order.ShowOrderViewModel>
+@{
+    ViewData["Title"] = "سبد خرید";
+    int count = 0;
+}
+
+<h1>سبد خرید</h1>
+
+<table class="table table-bordered text-center">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">تصویر</th>
+        <th scope="col">عنوان</th>
+        <th scope="col">تعداد</th>
+        <th scope="col">قیمت</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@(++count)</th>
+                <td>
+                    <img class="img-thumbnail" style="max-width: 150px" src="/Images/@item.ImageName" alt="@item.ImageName" />
+                </td>
+                <td>@item.Title</td>
+                <td>@item.Count</td>
+                <td>@item.price</td>
+                <td>
+                    <a  href="/Order/Commend/@item.OrderDetailId?command=up" class="badge badge-success text-white p-2 badge-pill">افزایش</a>
+                    <a  href="/Order/Commend/@item.OrderDetailId?command=down" class="badge badge-warning text-dark p-2 badge-pill">کاهش</a>
+                    <a asp-controller="Order" asp-action="Delete" asp-route-orderDetailId="@item.OrderDetailId" class="btn btn-sm btn-danger">
+                        حذف
+                    </a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td colspan="5">
+                جمع کل :
+            </td>
+            <td colspan="2">
+                @Model.Sum(o => o.Sum).ToRial()
+                تومان
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="text-left">
+            </td>
+            <td colspan="2">
+                <a class="btn btn-primary text-white btn-block">
+                    تایید و پرداخت نهایی
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

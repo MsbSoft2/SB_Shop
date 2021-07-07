@@ -1,0 +1,12 @@
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\bin\Debug\net5.0\SBShop.Utility.deps.json
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\bin\Debug\net5.0\SBShop.Utility.dll
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\bin\Debug\net5.0\ref\SBShop.Utility.dll
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\bin\Debug\net5.0\SBShop.Utility.pdb
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\obj\Debug\net5.0\SBShop.Utility.csproj.AssemblyReference.cache
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\obj\Debug\net5.0\SBShop.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\obj\Debug\net5.0\SBShop.Utility.AssemblyInfoInputs.cache
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\obj\Debug\net5.0\SBShop.Utility.AssemblyInfo.cs
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\obj\Debug\net5.0\SBShop.Utility.csproj.CoreCompileInputs.cache
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\obj\Debug\net5.0\SBShop.Utility.dll
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\obj\Debug\net5.0\ref\SBShop.Utility.dll
+C:\Users\SADRA\Desktop\SBShop\SBShop.Utility\obj\Debug\net5.0\SBShop.Utility.pdb

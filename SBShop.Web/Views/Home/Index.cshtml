@@ -1,0 +1,9 @@
+﻿@using SBShop.Utility.Convertors
+@model IEnumerable<SBShop.Data.DTO.Product.ShowListProduct>
+@{
+    ViewData["Title"] = "صفحه اصلی";
+}
+
+<h1>لیست محصولات</h1>
+<hr />
+<partial name="_ProductItem" model="Model" />
